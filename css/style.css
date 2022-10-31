@@ -13,7 +13,9 @@
 
 input {
     border: none;
+   
 }
+input:focus {outline: none;}
 
 a {
     color: #000000;
@@ -101,6 +103,7 @@ a {
 
 .a-menu {
     display: flex;
+    cursor: pointer;
 }
 
 .arrow {
@@ -142,9 +145,9 @@ a {
     background: url(../img/bg.png) center no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    -webkit-background-size: cover;    
-    -moz-background-size: cover;    
-    -o-background-size: cover;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -188,12 +191,13 @@ a {
     font-size: 18px;
     line-height: 22px;
     margin-top: 40px;
-    transition: 0.2s linear; /* Время изменения */
+    transition: 0.2s linear;
+    /* Время изменения */
 }
 
 .promo-btn:hover {
-    color: #80233A;  
-    background: #EFCFDA; 
+    color: #80233A;
+    background: #EFCFDA;
 }
 
 /* PROMO */
@@ -279,6 +283,7 @@ a {
 } */
 
 .button-best {
+    position: relative;
     background: #F5F5F5;
     border: none;
     font-family: 'Inter';
@@ -291,22 +296,47 @@ a {
     text-transform: uppercase;
     color: #828282;
     padding: 17px 29px;
-    transition: 0.2s linear; /* Время изменения */
+    transition: 0.2s linear;
+    /* Время изменения */
 }
-  
+
+.button-best:hover::after {
+    content: "";
+    display: block;
+    border: 20px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0px;
+    border-top: 20px solid #80233A;
+    top: 52px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.button-best:focus::after {
+    content: "";
+    display: block;
+    border: 20px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0px;
+    border-top: 20px solid #80233A;
+    top: 52px;
+    left: 50%;
+    margin-left: -20px;
+}
+
 
 /* hover-при наведении
 focus- при нажатии */
 
 
-.button-best:hover {    
-    color: #fff;  
-    background: #80233A; 
+.button-best:hover {
+    color: #fff;
+    background: #80233A;
 }
 
 .button-best:focus {
-    color: #fff;  
-    background: #80233A; 
+    color: #fff;
+    background: #80233A;
 }
 
 .cards_block1 {
@@ -390,16 +420,18 @@ focus- при нажатии */
     border: 1px solid #80233A;
     padding: 17px 58px;
     cursor: pointer;
-    transition: 0.5s linear; /* Время изменения */
+    transition: 0.5s linear;
+    /* Время изменения */
 }
+
 .btn_block-cards:hover {
-    color: #fff;  
-    background: #80233A; 
+    color: #fff;
+    background: #80233A;
 }
 
 .btn_block-cards:focus {
-    color: #80233A;  
-    background: #fff; 
+    color: #80233A;
+    background: #fff;
 }
 
 /* BEST */
@@ -454,13 +486,25 @@ focus- при нажатии */
 }
 
 .client2 {
+    position: relative;
     max-width: 659px;
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
     height: 271px;
 
 }
-
+.client2::after {
+    content: "";
+    display: block;
+    border: 25px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0px;
+    border-top: 25px solid #fff;
+    top: 270px;
+    left: 50%;
+    margin-left: -25px;
+    
+}
 
 .client1 {
     position: absolute;
@@ -584,9 +628,9 @@ focus- при нажатии */
     height: 400px;
     background-position: center center;
     background-attachment: fixed;
-    -webkit-background-size: cover;    
-    -moz-background-size: cover;    
-    -o-background-size: cover;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -648,13 +692,14 @@ focus- при нажатии */
     border: none;
     margin-top: 36px;
     cursor: pointer;
-    transition: 0.2s linear; /* Время изменения */
-    
+    transition: 0.2s linear;
+    /* Время изменения */
+
 }
 
 .btn-form:hover {
-    color: #80233A;  
-    background: #fff; 
+    color: #80233A;
+    background: #fff;
 }
 
 
